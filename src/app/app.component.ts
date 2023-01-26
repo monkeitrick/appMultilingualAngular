@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'appMultilingual';
+  title = 'angular-i18n-ngx-translate';
+
+  selectedLanguage='es';
+  constructor(private translateService:TranslateService){
+    this.translateService.setDefaultLang(this.selectedLanguage);
+    this.translateService.use(this.selectedLanguage);
+  }
+
+  selectLanguage(lang:string){
+      this.translateService.use(lang);
+  }
 }

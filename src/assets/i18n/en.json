@@ -1,0 +1,8 @@
+{
+    "HOME": {
+        "TITLE": "i18n example to Angular Project",
+        "ENGLISH": "Ingles",
+        "SPANISH": "Español",
+        "EUSKARA": "Euskera"
+    }
+}
